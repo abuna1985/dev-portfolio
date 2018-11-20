@@ -1,0 +1,28 @@
+{
+  "name": "dev-portfolio",
+  "version": "1.0.0",
+  "description": "My responsive portfolio website",
+  "main": "index.js",
+  "scripts": {
+    "start": "run-script-os",
+    "start:win32": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 7777 --browser \"C:\\Program Files\\Firefox Developer Edition\\firefox.exe\"",
+    "//": "Hello! If you are having trouble running this command. Try changing Firefox Developer Edition to FirefoxDeveloperEdition",
+    "start:darwin:linux": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 7777 --browser 'firefox'",
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abuna1985/dev-portfolio.git"
+  },
+  "author": "Adam Abundis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abuna1985/dev-portfolio/issues"
+  },
+  "homepage": "https://github.com/abuna1985/dev-portfolio#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "node-sass": "^4.10.0",
+    "run-script-os": "^1.0.3"
+  }
+}
