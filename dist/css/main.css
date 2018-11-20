@@ -1,2 +1,95 @@
+/* ================================================
+    Menu Button
+   ================================================ */
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+  /* Rotate into X with Menu Lines */ }
+  .menu-btn .btn-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: #fff;
+    transition: all 0.5s ease-out; }
+  .menu-btn.close {
+    transform: rotate(180deg); }
+    .menu-btn.close .btn-line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px); }
+    .menu-btn.close .btn-line:nth-child(2) {
+      opacity: 0; }
+    .menu-btn.close .btn-line:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -6px); }
+
+* {
+  box-sizing: border-box; }
+
 body {
-  background: #444; }
+  background: #444;
+  color: #fff;
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5; }
+  body#bg-img {
+    background: url(../img/background.jpg) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover; }
+    body#bg-img:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba(68, 68, 68, 0.9); }
+
+/* ================================================
+    Headings
+   ================================================ */
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400; }
+  h1.content__lg-heading,
+  h2.content__lg-heading,
+  h3.content__lg-heading {
+    font-size: 6rem; }
+  h1.content__sm-heading,
+  h2.content__sm-heading,
+  h3.content__sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: rgba(73, 73, 73, 0.5); }
+
+a {
+  color: #fff;
+  text-decoration: none; }
+
+.site-header {
+  position: fixed;
+  z-index: 2;
+  width: 100%; }
+
+.content__text-secondary {
+  color: #ff851b; }
+
+.content {
+  padding: 4rem;
+  height: 100%; }
+  .content .icons {
+    margin-top: 1rem; }
+    .content .icons__link {
+      padding: 0.4rem; }
+      .content .icons__link:hover {
+        color: #ff851b;
+        transition: all 0.5s ease-out; }
+  .content#home {
+    overflow: hidden; }
+    .content#home h1 {
+      margin-top: 20vh; }
