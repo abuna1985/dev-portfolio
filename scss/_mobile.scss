@@ -1,0 +1,61 @@
+// Widescreens
+
+@include atExtraLarge {
+}
+
+@include atLarge {
+}
+
+@include atMedium {
+  .content {
+    align-items: center;
+    text-align: center;
+
+    &__lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+  }
+
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0;
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px;
+  }
+
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0);
+
+    .portrait {
+      background: url("../img/adam_portrait_small.jpg");
+      width: 150px;
+      height: 150px;
+    }
+  }
+}
+
+@include atSmall {
+  .content {
+    padding: 2rem;
+    #home h1 {
+      margin-top: 10vh;
+    }
+
+    &__lg-heading {
+      margin-top: 1rem;
+      font-size: 5rem;
+    }
+  }
+}
