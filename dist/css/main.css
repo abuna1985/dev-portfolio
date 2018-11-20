@@ -1,3 +1,5 @@
+/* Set Text Color */
+/* Media Query Mixins */
 /* ================================================
     Menu Button
    ================================================ */
@@ -97,42 +99,6 @@
 .nav-item:nth-child(4) {
   transition-delay: 0.6s; }
 
-@media screen and (max-width: 768px) {
-  .content {
-    align-items: center;
-    text-align: center; }
-    .content__lg-heading {
-      line-height: 1;
-      margin-bottom: 1rem; }
-  ul.menu-nav,
-  div.menu-branding {
-    float: none;
-    width: 100%;
-    min-height: 0; }
-    ul.menu-nav.show,
-    div.menu-branding.show {
-      transform: translate3d(0, 0, 0); }
-  .menu-nav {
-    height: 75vh;
-    transform: translate3d(-100%, 0, 0);
-    font-size: 24px; }
-  .menu-branding {
-    height: 25vh;
-    transform: translate3d(100%, 0, 0); }
-    .menu-branding .portrait {
-      background: url("../img/adam_portrait_small.jpg");
-      width: 150px;
-      height: 150px; } }
-
-@media screen and (max-width: 500px) {
-  .content {
-    padding: 2rem; }
-    .content #home h1 {
-      margin-top: 10vh; }
-    .content__lg-heading {
-      margin-top: 1rem;
-      font-size: 5rem; } }
-
 * {
   box-sizing: border-box; }
 
@@ -190,7 +156,7 @@ a {
 
 .content {
   padding: 4rem;
-  height: 100%; }
+  min-height: calc(100vh - 60px); }
   .content .icons {
     margin-top: 1rem; }
     .content .icons__link {
@@ -202,3 +168,72 @@ a {
     overflow: hidden; }
     .content#home h1 {
       margin-top: 20vh; }
+
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: "bioimage bio   bio" "job1     job2  job3";
+  grid-template-columns: repeat(3, 1fr); }
+  .about-info .bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: 3px solid #ff851b; }
+  .about-info .bio {
+    grid-area: bio;
+    font-size: 1.5rem; }
+  .about-info .job-1 {
+    grid-area: job1; }
+  .about-info .job-2 {
+    grid-area: job2; }
+  .about-info .job-3 {
+    grid-area: job3; }
+  .about-info .job {
+    background: #515151;
+    padding: 0.5rem;
+    border-bottom: 5px solid #ff851b; }
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #2b2b2b;
+  color: #fff;
+  height: 60px; }
+
+@media screen and (max-width: 768px) {
+  .content {
+    display: grid;
+    align-items: center;
+    text-align: center; }
+    .content__lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show,
+    div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px; }
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0); }
+    .menu-branding .portrait {
+      background: url("../img/adam_portrait_small.jpg");
+      width: 150px;
+      height: 150px; }
+  .about-info {
+    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3" "footer";
+    grid-template-columns: 1fr; } }
+
+@media screen and (max-width: 500px) {
+  .content #home h1 {
+    margin-top: 10vh; }
+  __lg-heading {
+    margin-top: 1rem;
+    padding: 0; } }
