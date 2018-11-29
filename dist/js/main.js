@@ -1,9 +1,9 @@
 // Select DOM Items
 const menuBtn = document.querySelector(".menu-btn");
 const menu = document.querySelector(".menu");
-const menuBranding = document.querySelector(".menu-branding");
+const menuBranding = document.querySelector(".menu__branding");
 const menuNav = document.querySelector(".menu-nav");
-const navItems = document.querySelectorAll(".nav-item");
+const navItems = document.querySelectorAll(".menu-nav__item");
 
 // Set Initial State of the Menu
 let isMenuShown = false;
@@ -21,20 +21,20 @@ document.addEventListener(
 
 function toggleMenu() {
   if (!isMenuShown) {
-    menuBtn.classList.add("close");
-    menu.classList.add("show");
-    menuNav.classList.add("show");
-    menuBranding.classList.add("show");
-    navItems.forEach(item => item.classList.add("show"));
+    menuBtn.classList.add("menu--close");
+    menu.classList.add("menu--show");
+    menuNav.classList.add("menu--show");
+    menuBranding.classList.add("menu--show");
+    navItems.forEach(item => item.classList.add("menu--show"));
 
     // Set Menu State
     isMenuShown = true;
   } else {
-    menuBtn.classList.remove("close");
-    menu.classList.remove("show");
-    menuNav.classList.remove("show");
-    menuBranding.classList.remove("show");
-    navItems.forEach(item => item.classList.remove("show"));
+    menuBtn.classList.remove("menu--close");
+    menu.classList.remove("menu--show");
+    menuNav.classList.remove("menu--show");
+    menuBranding.classList.remove("menu--show");
+    navItems.forEach(item => item.classList.remove("menu--show"));
 
     // Set Menu State
     isMenuShown = false;

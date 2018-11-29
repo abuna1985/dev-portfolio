@@ -2,15 +2,18 @@ $primary-color: #444;
 $secondary-color: #ff851b;
 $show-home-image: true;
 $home-image: url(../img/background.jpg);
+$portrait-image: url(../img/adam_portrait.jpg);
+$portrait-image-small: url(../img/adam_portrait_small.jpg);
 $background-opacity: 0.9;
 
 @mixin easeOut {
+  -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
 
 @mixin background {
   @if $show-home-image {
-    &#bg-img {
+    &.bg-img {
       background: $home-image no-repeat center center;
       background-attachment: fixed;
       background-size: cover;
@@ -40,7 +43,7 @@ $background-opacity: 0.9;
 
 /* Media Query Mixins */
 @mixin atSmall {
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 530px) {
     @content;
   }
 }

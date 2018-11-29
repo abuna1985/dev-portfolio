@@ -14,71 +14,95 @@
     <link rel="stylesheet" type="text/css" href="css/main.css" />
   </head>
   <body>
-    <header class="site-header">
+    <header class="header">
       <div class="menu-btn">
-        <div class="btn-line"></div>
-        <div class="btn-line"></div>
-        <div class="btn-line"></div>
+        <div class="menu-btn__line"></div>
+        <div class="menu-btn__line"></div>
+        <div class="menu-btn__line"></div>
       </div>
 
       <nav class="menu">
-        <div class="menu-branding"><div class="portrait"></div></div>
+        <div class="menu__branding"><div class="menu__portrait"></div></div>
         <ul class="menu-nav">
-          <li class="nav-item "><a href="/" class="nav-link"> Home </a></li>
-          <li class="nav-item current">
-            <a href="/about.html" class="nav-link">About Me</a>
+          <li class="menu-nav__item ">
+            <a href="./index.html" class="menu-nav__link">Home</a>
           </li>
-          <li class="nav-item">
-            <a href="/work.html" class="nav-link">My Work</a>
+          <li class="menu-nav__item menu-nav--current">
+            <a href="./about.html" class="menu-nav__link">About Me</a>
           </li>
-          <li class="nav-item">
-            <a href="/contact.html" class="nav-link">Contact Me </a>
+          <li class="menu-nav__item">
+            <a href="./work.html" class="menu-nav__link">My Work</a>
+          </li>
+          <li class="menu-nav__item">
+            <a href="./contact.html" class="menu-nav__link">Contact Me</a>
           </li>
         </ul>
       </nav>
     </header>
 
-    <main class="content" id="about">
-      <h1 class="content__lg-heading">
-        About <span class="content__text-secondary">Me</span>
+    <main class="main main--about">
+      <h1 class="main__title">
+        About <span class="main--secondary-color">Me</span>
       </h1>
-      <h2 class="content__sm-heading">Here are a few things about me...</h2>
-      <div class="about-info">
-        <img src="img/adam_portrait.jpg" alt="Adam Abundis" class="bio-image" />
+      <h2 class="main__subtitle">My programming journey...</h2>
+      <div class="about">
+        <div class="about__image">
+          <picture>
+            <source
+              srcset="./img/adam_portrait.jpg"
+              media="(min-width: 768px)"
+            />
+            <img
+              src="./img/adam_portrait_small.jpg"
+              alt="Adam Abundis Portrait"
+            />
+          </picture>
+        </div>
         <div class="bio">
-          <h3 class="text-secondary">BIO</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero odio
-            molestias delectus fugiat possimus, eum atque perferendis
-            repellendus harum sed molestiae alias nulla minima eligendi
-            provident est, quis, aspernatur nam!
+          <p class="bio__text">
+            I have always been a problem solver at heart. Although my
+            professional path has taken many twists and turns — from retail to
+            the hospitality industry where I delivered over the top service at
+            Disney's Grand California Hotel and Spa, to troubleshooting Saas
+            software and payment gateway systems — I've never stopped engaging
+            my passion to help others and solve problems.
+          </p>
+          <p class="bio__text">
+            As a front-end developer, I use my tenacious attention to detail, my
+            passion for making things, and my mission-driven work ethic to make
+            a difference in people's lives. That's why I’m excited to make a big
+            impact at a high growth company.
           </p>
         </div>
-        <div class="job job-1">
+        <div class="job job--1">
           <h3>Deluxe Brand Marketing</h3>
-          <h6>Junior Web Developer</h6>
+          <h5>Junior Web Developer</h5>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-            incidunt quam quas exercitationem temporibus perspiciatis debitis
-            minus et aliquam laboriosam?
+            Developed web application features using PHP, Classic ASP, HTML,
+            JavaScript with jQuery, CSS, AJAX. Executed the daily tasks of
+            website content updates, bug fixes, product support, building
+            internal tools, templates, reports and other operational support
+            activities.
           </p>
         </div>
-        <div class="job job-2">
+        <div class="job job--2">
           <h3>Cornerstone Payment Systems</h3>
-          <h6>Front End Developer</h6>
+          <h5>Front End Developer</h5>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-            incidunt quam quas exercitationem temporibus perspiciatis debitis
-            minus et aliquam laboriosam?
+            As a front-end developer intern, I helped set up and create
+            eCommerce webpages for clients in a custom PHP template environment.
+            Worked with the engineering team to provide websites that were
+            responsive and cross-browser compatible.
           </p>
         </div>
-        <div class="job job-3">
+        <div class="job job--3">
           <h3>Cornerstone Merchant Services</h3>
-          <h6>Technical Support/Implementation Specialist</h6>
+          <h5>Technical Support Agent</h5>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-            incidunt quam quas exercitationem temporibus perspiciatis debitis
-            minus et aliquam laboriosam?
+            Assisted in the set up of hardware and software for customers over
+            the phone and/or in person. Provided support to external developers
+            for the companies payment gateway API. Built and maintained UI for
+            customer's eCommerce webpage.
           </p>
         </div>
       </div>

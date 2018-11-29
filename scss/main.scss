@@ -1,7 +1,9 @@
 @import "config";
-@import "menu";
+@import "header";
 
+/* Start Global Styles */
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -15,51 +17,47 @@ body {
   line-height: 1.5;
 }
 
-/* ================================================
-    Headings
-   ================================================ */
-
-h1,
-h2,
-h3 {
+.main__title,
+.main__subtitle {
   margin: 0;
   font-weight: 400;
+}
+/* End Global Styles */
+/* Start Main Styles */
+.main {
+  padding: 3rem;
+  min-height: calc(100vh - 60px);
 
-  &.content__lg-heading {
-    font-size: 6rem;
+  &__title {
+    max-width: 100%;
+    font-size: 7vw;
   }
 
-  &.content__sm-heading {
+  &__subtitle {
+    font-size: 2vw;
     margin-bottom: 2rem;
-    padding: 0.2rem 1rem;
+    padding: 0.2rem 0;
     background: rgba(lighten($primary-color, 2), 0.5);
   }
-}
 
-a {
-  color: #fff;
-  text-decoration: none;
-}
+  &--secondary-color {
+    color: $secondary-color;
+  }
 
-.site-header {
-  position: fixed;
-  z-index: 2;
-  width: 100%;
-}
-
-.content__text-secondary {
-  color: $secondary-color;
-}
-
-.content {
-  padding: 4rem;
-  min-height: calc(100vh - 60px);
+  &--home {
+    overflow: hidden;
+    .main__title {
+      margin-top: 20vh;
+    }
+  }
 
   .icons {
     margin-top: 1rem;
 
     &__link {
-      padding: 0.4rem;
+      padding: 0 0.5rem 0 0.5rem;
+      color: #fff;
+      text-decoration: none;
 
       &:hover {
         color: $secondary-color;
@@ -68,15 +66,99 @@ a {
     }
   }
 
-  &#home {
-    overflow: hidden;
-    h1 {
-      margin-top: 20vh;
+  &--about,
+  &--contact {
+    .main__title {
+      margin-top: 10vh;
+    }
+  }
+
+  .contact {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas:
+      "email"
+      "links";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    color: #fff;
+
+    &__info--email {
+      grid-area: email;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+
+      .contact__link {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.5rem;
+
+        &::after {
+          content: "";
+          display: block;
+          width: 0;
+          height: 2px;
+          background: $secondary-color;
+          @include easeOut;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+
+    &__info {
+      grid-area: links;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      padding: 20px;
+
+      .contact__icon {
+        background: $secondary-color;
+        border-radius: 50%;
+        text-decoration: none;
+        margin-right: 10px;
+        color: #fff;
+        height: 55.5px;
+        width: 55.5px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        @include easeOut;
+
+        &:hover {
+          -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+        }
+      }
     }
   }
 }
+/* End Main Styles */
 
-.about-info {
+.about {
   display: grid;
   grid-gap: 30px;
   grid-template-areas:
@@ -84,34 +166,58 @@ a {
     "job1     job2  job3";
   grid-template-columns: repeat(3, 1fr);
 
-  .bio-image {
+  &__image {
     grid-area: bioimage;
-    margin: auto;
-    border-radius: 50%;
-    border: 3px solid $secondary-color;
-  }
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
 
-  .bio {
-    grid-area: bio;
-    font-size: 1.5rem;
-  }
+    img {
+      border-radius: 50%;
+      @include easeOut;
+      border: 3px solid $secondary-color;
+      cursor: pointer;
 
-  .job-1 {
-    grid-area: job1;
-  }
-
-  .job-2 {
-    grid-area: job2;
-  }
-
-  .job-3 {
-    grid-area: job3;
+      &:hover {
+        -webkit-transform: rotate(-30deg);
+        transform: rotate(-30deg);
+      }
+    }
   }
 
   .job {
     background: lighten($primary-color, 5);
     padding: 0.5rem;
     border-bottom: 5px solid $secondary-color;
+    margin-top: 5vh;
+
+    &.job--1 {
+      grid-area: job1;
+    }
+
+    &.job--2 {
+      grid-area: job2;
+    }
+
+    &.job--3 {
+      grid-area: job3;
+    }
+  }
+
+  .bio {
+    grid-area: bio;
+    font-size: 1.5rem;
+
+    .bio__text {
+      line-height: 1.5;
+      font-size: 18px;
+    }
   }
 }
 
@@ -121,23 +227,59 @@ a {
   grid-gap: 20px;
   grid-template-columns: repeat(3, 1fr);
 
-  img {
-    width: 100%;
-    border: 3px solid #fff;
+  .item {
+    height: 350px;
+    margin-bottom: 60px;
+    position: relative;
+    overflow: hidden;
+    background: lighten($primary-color, 5);
+    border-bottom: 5px solid $secondary-color;
+    margin: 0.5rem 0 1rem 0;
+    margin-bottom: 1rem;
+    border-radius: 2px;
+    background-clip: padding-box;
 
-    &:hover {
-      opacity: 0.5;
-      border-color: $secondary-color;
-      @include easeOut;
+    .item__image {
+      overflow: hidden;
+      position: relative;
+
+      img {
+        border-radius: 2px 2px 0 0;
+        background-clip: padding-box;
+        position: relative;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+      }
     }
   }
+  .card-content {
+    padding: 20px 20px 30px 20px;
+  }
+  /*
+  &:hover {
+    opacity: 0.5;
+    border-color: $secondary-color;
+    @include easeOut;
+  }
+
+  */
 }
 
 /* Contact Page */
 .boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-top: 1rem;
 

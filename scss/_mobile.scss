@@ -13,46 +13,75 @@
 }
 
 @include atMedium {
-  .content {
+  .main--home {
     display: grid;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
-    text-align: center;
 
-    &__lg-heading {
+    .main__title {
+      font-size: 12vw;
       line-height: 1;
+      margin-top: 5vh;
       margin-bottom: 1rem;
     }
   }
 
-  ul.menu-nav,
-  div.menu-branding {
+  .main {
+    padding: 1rem;
+
+    .main__subtitle {
+      margin: 0;
+      font-size: 1.25rem;
+    }
+  }
+  .main--about,
+  .main--contact {
+    .main__title {
+      font-size: 12vw;
+      line-height: 1;
+      margin-top: 15vh;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .header .menu-nav,
+  .header .menu__branding {
     float: none;
     width: 100%;
     min-height: 0;
 
-    &.show {
+    &.menu--show {
+      -webkit-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0);
     }
   }
 
   .menu-nav {
     height: 75vh;
+    -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
+    background: rgba(darken($primary-color, 9), 1);
     font-size: 24px;
   }
 
-  .menu-branding {
+  .menu__branding {
     height: 25vh;
+    -webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0);
 
-    .portrait {
-      background: url("../img/adam_portrait_small.jpg");
+    .menu__portrait {
+      background: $portrait-image-small no-repeat center center;
+      background-attachment: fixed;
+      background-size: cover;
       width: 150px;
       height: 150px;
     }
   }
 
-  .about-info {
+  .about {
     grid-template-areas:
       "bioimage"
       "bio"
@@ -61,6 +90,14 @@
       "job3"
       "footer";
     grid-template-columns: 1fr;
+
+    &__image {
+      padding-top: 25px;
+    }
+
+    .job {
+      margin-top: 0;
+    }
   }
 
   .projects {
@@ -73,13 +110,31 @@
 }
 
 @include atSmall {
-  .content #home h1 {
-    margin-top: 10vh;
+  .main__title {
+    line-height: 1;
+    margin-top: 0;
   }
 
-  &__lg-heading {
-    margin-top: 1rem;
-    padding: 0;
+  .main {
+    .main__subtitle {
+      font-size: 1rem;
+    }
+
+    .about {
+      .bio {
+        &__text {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .contact {
+      &__info--email {
+        .contact__link {
+          font-size: 1rem;
+        }
+      }
+    }
   }
 
   .projects {
