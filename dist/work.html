@@ -15,82 +15,187 @@
   </head>
   <body>
     <div class="container">
-      <header class="site-header">
+      <header class="header">
         <div class="menu-btn">
-          <div class="btn-line"></div>
-          <div class="btn-line"></div>
-          <div class="btn-line"></div>
+          <div class="menu-btn__line"></div>
+          <div class="menu-btn__line"></div>
+          <div class="menu-btn__line"></div>
         </div>
 
         <nav class="menu">
-          <div class="menu-branding"><div class="portrait"></div></div>
+          <div class="menu__branding"><div class="menu__portrait"></div></div>
           <ul class="menu-nav">
-            <li class="nav-item ">
-              <a href="./index.html" class="nav-link"> Home </a>
+            <li class="menu-nav__item ">
+              <a href="./index.html" class="menu-nav__link">Home</a>
             </li>
-            <li class="nav-item ">
-              <a href="./about.html" class="nav-link">About Me</a>
+            <li class="menu-nav__item ">
+              <a href="./about.html" class="menu-nav__link">About Me</a>
             </li>
-            <li class="nav-item current">
-              <a href="./work.html" class="nav-link">My Work</a>
+            <li class="menu-nav__item menu-nav--current">
+              <a href="./work.html" class="menu-nav__link">My Work</a>
             </li>
-            <li class="nav-item">
-              <a href="./contact.html" class="nav-link">Contact Me </a>
+            <li class="menu-nav__item">
+              <a href="./contact.html" class="menu-nav__link">Contact Me</a>
             </li>
           </ul>
         </nav>
       </header>
 
-      <main class="content" id="work">
-        <h1 class="content__lg-heading">
-          My <span class="content__text-secondary">Portfolio</span>
+      <main class="main main--work">
+        <h1 class="main__title">
+          My <span class="main--secondary-color">Work</span>
         </h1>
-        <h2 class="content__sm-heading">Feel free to view my projects...</h2>
-        <div class="projects">
-          <div class="item">
-            <div class="item__image">
-              <img
-                src="img/projects/project-1.jpg"
-                alt="Screenshot for Mock Travel Site"
-              />
+        <h2 class="main__subtitle">Feel free to view my projects...</h2>
+        <ul class="cards">
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__image card__image--project-1"></div>
+              <div class="card__content">
+                <h4 class="card__title">Clear View Escapes</h4>
+                <p class="card__text">
+                  This is the shorthand for flex-grow, flex-shrink and
+                  flex-basis combined. The second and third parameters
+                  (flex-shrink and flex-basis) are optional. Default is 0 1
+                  auto.
+                </p>
+              </div>
+              <div class="card__button">
+                <a
+                  class="card__icon"
+                  target="_blank"
+                  href="https://github.com/abuna1985/travel-site"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+                <a
+                  class="card__icon"
+                  target="_blank"
+                  href="https://github.com/abuna1985"
+                >
+                  <i class="fas fa-link"></i>
+                </a>
+              </div>
             </div>
-            <div class="card-content">
-              <span class="card-title activator teal-text hoverline"
-                >Skate Something<i class="mdi-navigation-more-vert right"></i
-              ></span>
-              <p>
-                Mobile-focused web app where users can explore, collect, and
-                share skate spots.
-              </p>
+          </li>
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__image card__image--project-2"></div>
+              <div class="card__content">
+                <h4 class="card__title">Color Guessing Game</h4>
+                <p class="card__text">
+                  This defines the ability for a flex item to grow if necessary.
+                  It accepts a unitless value that serves as a proportion. It
+                  dictates what amount of the available space inside the flex
+                  container the item should take up.
+                </p>
+              </div>
+              <div class="card__button">
+                <a
+                  class="card__icon"
+                  target="_blank"
+                  href="https://github.com/abuna1985/travel-site"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+                <a
+                  class="card__icon"
+                  target="_blank"
+                  href="https://github.com/abuna1985"
+                >
+                  <i class="fas fa-link"></i>
+                </a>
+              </div>
             </div>
-          </div>
-          <div class="item">
-            <a href="#!">
-              <img src="img/projects/project-2.jpg" alt="Color Guessing Game" />
-            </a>
-          </div>
-          <div class="item">
-            <a href="#!">
-              <img
-                src="img/projects/project-3.jpg"
-                alt="Mock Food Delivery Website"
-              />
-            </a>
-          </div>
-          <div class="item">
-            <a href="#!">
-              <img src="img/projects/project-4.jpg" alt="Wikipedia React App" />
-            </a>
-          </div>
-          <div class="item">
-            <a href="#!">
-              <img
-                src="img/projects/project-5.jpg"
-                alt="Random Hacker News Story Generator"
-              />
-            </a>
-          </div>
-        </div>
+          </li>
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__image card__image--project-3"></div>
+              <div class="card__content">
+                <h4 class="card__title">Mock Delivery Website</h4>
+                <p class="card__text">
+                  This defines the ability for a flex item to shrink if
+                  necessary. Negative numbers are invalid.
+                </p>
+              </div>
+              <div class="card__button">
+                <a
+                  class="card__icon"
+                  target="_blank"
+                  href="https://github.com/abuna1985/travel-site"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+                <a
+                  class="card__icon"
+                  target="_blank"
+                  href="https://github.com/abuna1985"
+                >
+                  <i class="fas fa-link"></i>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__image card__image--project-4"></div>
+              <div class="card__content">
+                <h4 class="card__title">Wikipedia React App</h4>
+                <p class="card__text">
+                  This defines the default size of an element before the
+                  remaining space is distributed. It can be a length (e.g. 20%,
+                  5rem, etc.) or a keyword. The auto keyword means "look at my
+                  width or height property."
+                </p>
+              </div>
+              <div class="card__button">
+                <a
+                  class="card__icon"
+                  target="_blank"
+                  href="https://github.com/abuna1985/travel-site"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+                <a
+                  class="card__icon"
+                  target="_blank"
+                  href="https://github.com/abuna1985"
+                >
+                  <i class="fas fa-link"></i>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__image card__image--project-5"></div>
+              <div class="card__content">
+                <h4 class="card__title">My Portfolio Website</h4>
+                <p class="card__text">
+                  This defines the default size of an element before the
+                  remaining space is distributed. It can be a length (e.g. 20%,
+                  5rem, etc.) or a keyword. The auto keyword means "look at my
+                  width or height property."
+                </p>
+              </div>
+              <div class="card__button">
+                <a
+                  class="card__icon"
+                  target="_blank"
+                  href="https://github.com/abuna1985/travel-site"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+                <a
+                  class="card__icon"
+                  target="_blank"
+                  href="https://github.com/abuna1985"
+                >
+                  <i class="fas fa-link"></i>
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
       </main>
       <footer id="main-footer">Copyright &copy; 2018</footer>
     </div>

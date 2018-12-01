@@ -67,7 +67,8 @@ body {
   }
 
   &--about,
-  &--contact {
+  &--contact,
+  &--work {
     .main__title {
       margin-top: 10vh;
     }
@@ -176,7 +177,7 @@ body {
     -ms-flex-pack: center;
     justify-content: center;
     -ms-flex-line-pack: center;
-    align-content: center;
+    align-items: center;
 
     img {
       border-radius: 50%;
@@ -196,6 +197,15 @@ body {
     padding: 0.5rem;
     border-bottom: 5px solid $secondary-color;
     margin-top: 5vh;
+
+    &__title {
+      color: $secondary-color;
+      font-weight: 400;
+    }
+
+    &__subtitle {
+      font-weight: 400;
+    }
 
     &.job--1 {
       grid-area: job1;
@@ -222,50 +232,122 @@ body {
 }
 
 /* Work/Porfolio */
-.projects {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(3, 1fr);
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-  .item {
-    height: 350px;
-    margin-bottom: 60px;
-    position: relative;
-    overflow: hidden;
-    background: lighten($primary-color, 5);
-    border-bottom: 5px solid $secondary-color;
-    margin: 0.5rem 0 1rem 0;
-    margin-bottom: 1rem;
-    border-radius: 2px;
-    background-clip: padding-box;
+.cards__item {
+  display: flex;
+  padding: 1rem;
+  @media (min-width: 40rem) {
+    width: 50%;
+  }
+  @media (min-width: 56rem) {
+    width: 33.3333%;
+  }
+}
 
-    .item__image {
-      overflow: hidden;
-      position: relative;
+.card {
+  background-color: lighten($primary-color, 7);
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 15px -12px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 
-      img {
-        border-radius: 2px 2px 0 0;
-        background-clip: padding-box;
-        position: relative;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        width: 100%;
-      }
+  &:hover {
+    .card__image {
+      filter: contrast(100%);
     }
   }
-  .card-content {
-    padding: 20px 20px 30px 20px;
-  }
-  /*
-  &:hover {
-    opacity: 0.5;
-    border-color: $secondary-color;
+}
+.card__button {
+  background-color: $secondary-color;
+  padding: 0.25rem 0.5rem;
+  display: flex;
+  justify-content: space-evenly;
+
+  .card__icon {
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #fff;
     @include easeOut;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+}
+
+.card__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 1rem;
+
+  .card__title {
+    color: $secondary-color;
+    font-size: 1.25rem;
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
   }
 
-  */
+  .card__text {
+    flex: 1 1 auto;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+  }
+}
+
+.card__image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  filter: contrast(70%);
+  //filter: saturate(180%);
+  overflow: hidden;
+  position: relative;
+  @include easeOut;
+  &::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%; // 16:9 aspect ratio
+  }
+  @media (min-width: 40rem) {
+    &::before {
+      padding-top: 66.6%; // 3:2 aspect ratio
+    }
+  }
+
+  &.card__image--project-1 {
+    background-image: $project-img-1;
+  }
+
+  &.card__image--project-2 {
+    background-image: $project-img-2;
+  }
+
+  &.card__image--project-3 {
+    background-image: $project-img-3;
+  }
+
+  &.card__image--project-4 {
+    background-image: $project-img-4;
+  }
+
+  &.card__image--project-5 {
+    background-image: $project-img-5;
+    background-position: left center;
+  }
 }
 
 /* Contact Page */

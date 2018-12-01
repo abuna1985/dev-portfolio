@@ -198,7 +198,7 @@ body {
         color: #ff851b;
         -webkit-transition: all 0.5s ease-out;
         transition: all 0.5s ease-out; }
-  .main--about .main__title, .main--contact .main__title {
+  .main--about .main__title, .main--contact .main__title, .main--work .main__title {
     margin-top: 10vh; }
   .main .contact {
     display: grid;
@@ -284,7 +284,7 @@ body {
     -ms-flex-pack: center;
     justify-content: center;
     -ms-flex-line-pack: center;
-    align-content: center; }
+    align-items: center; }
     .about__image img {
       border-radius: 50%;
       -webkit-transition: all 0.5s ease-out;
@@ -299,6 +299,11 @@ body {
     padding: 0.5rem;
     border-bottom: 5px solid #ff851b;
     margin-top: 5vh; }
+    .about .job__title {
+      color: #ff851b;
+      font-weight: 400; }
+    .about .job__subtitle {
+      font-weight: 400; }
     .about .job.job--1 {
       grid-area: job1; }
     .about .job.job--2 {
@@ -313,43 +318,94 @@ body {
       font-size: 18px; }
 
 /* Work/Porfolio */
-.projects {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(3, 1fr);
-  /*
-  &:hover {
-    opacity: 0.5;
-    border-color: $secondary-color;
-    @include easeOut;
-  }
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
 
-  */ }
-  .projects .item {
-    height: 350px;
-    margin-bottom: 60px;
-    position: relative;
-    overflow: hidden;
-    background: #515151;
-    border-bottom: 5px solid #ff851b;
-    margin: 0.5rem 0 1rem 0;
-    margin-bottom: 1rem;
-    border-radius: 2px;
-    background-clip: padding-box; }
-    .projects .item .item__image {
-      overflow: hidden;
-      position: relative; }
-      .projects .item .item__image img {
-        border-radius: 2px 2px 0 0;
-        background-clip: padding-box;
-        position: relative;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        width: 100%; }
-  .projects .card-content {
-    padding: 20px 20px 30px 20px; }
+.cards__item {
+  display: flex;
+  padding: 1rem; }
+  @media (min-width: 40rem) {
+    .cards__item {
+      width: 50%; } }
+  @media (min-width: 56rem) {
+    .cards__item {
+      width: 33.3333%; } }
+
+.card {
+  background-color: #565656;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 15px -12px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; }
+  .card:hover .card__image {
+    filter: contrast(100%); }
+
+.card__button {
+  background-color: #ff851b;
+  padding: 0.25rem 0.5rem;
+  display: flex;
+  justify-content: space-evenly; }
+  .card__button .card__icon {
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #fff;
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out; }
+    .card__button .card__icon:hover {
+      transform: translateY(-5px); }
+
+.card__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 1rem; }
+  .card__content .card__title {
+    color: #ff851b;
+    font-size: 1.25rem;
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-transform: uppercase; }
+  .card__content .card__text {
+    flex: 1 1 auto;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem; }
+
+.card__image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  filter: contrast(70%);
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out; }
+  .card__image::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%; }
+  @media (min-width: 40rem) {
+    .card__image::before {
+      padding-top: 66.6%; } }
+  .card__image.card__image--project-1 {
+    background-image: url(../img/projects/project-1.jpg); }
+  .card__image.card__image--project-2 {
+    background-image: url(../img/projects/project-2.jpg); }
+  .card__image.card__image--project-3 {
+    background-image: url(../img/projects/project-3.jpg); }
+  .card__image.card__image--project-4 {
+    background-image: url(../img/projects/project-4.jpg); }
+  .card__image.card__image--project-5 {
+    background-image: url(../img/projects/project-5.jpg);
+    background-position: left center; }
 
 /* Contact Page */
 .boxes {
@@ -413,7 +469,8 @@ body {
       margin: 0;
       font-size: 1.25rem; }
   .main--about .main__title,
-  .main--contact .main__title {
+  .main--contact .main__title,
+  .main--work .main__title {
     font-size: 12vw;
     line-height: 1;
     margin-top: 15vh;
@@ -451,9 +508,8 @@ body {
     .about .job {
       margin-top: 0; }
   .projects {
-    grid-template-columns: repeat(2, 1fr); }
-    .projects img {
-      height: auto; } }
+    grid-template-columns: repeat(2, minmax(300px));
+    margin-top: 1rem; } }
 
 @media screen and (max-width: 530px) {
   .main__title {
