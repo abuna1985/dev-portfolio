@@ -177,6 +177,8 @@ body {
     -ms-flex-pack: center;
     justify-content: center;
     -ms-flex-line-pack: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 
     img {
@@ -233,7 +235,10 @@ body {
 
 /* Work/Porfolio */
 .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
@@ -241,6 +246,8 @@ body {
 }
 
 .cards__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 1rem;
   @media (min-width: 40rem) {
@@ -254,13 +261,20 @@ body {
 .card {
   background-color: lighten($primary-color, 7);
   border-radius: 0.25rem;
+  -webkit-box-shadow: 0 20px 15px -12px rgba(0, 0, 0, 0.25);
   box-shadow: 0 20px 15px -12px rgba(0, 0, 0, 0.25);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   overflow: hidden;
 
   &:hover {
     .card__image {
+      -webkit-filter: contrast(100%);
       filter: contrast(100%);
     }
   }
@@ -268,7 +282,11 @@ body {
 .card__button {
   background-color: $secondary-color;
   padding: 0.25rem 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
 
   .card__icon {
@@ -278,14 +296,22 @@ body {
     @include easeOut;
 
     &:hover {
+      -webkit-transform: translateY(-5px);
       transform: translateY(-5px);
     }
   }
 }
 
 .card__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   padding: 1rem;
 
@@ -299,6 +325,8 @@ body {
   }
 
   .card__text {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     font-size: 0.875rem;
     line-height: 1.5;
@@ -312,6 +340,7 @@ body {
   background-size: cover;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
+  -webkit-filter: contrast(70%);
   filter: contrast(70%);
   //filter: saturate(180%);
   overflow: hidden;

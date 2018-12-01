@@ -284,6 +284,8 @@ body {
     -ms-flex-pack: center;
     justify-content: center;
     -ms-flex-line-pack: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center; }
     .about__image img {
       border-radius: 50%;
@@ -319,13 +321,18 @@ body {
 
 /* Work/Porfolio */
 .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0; }
 
 .cards__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 1rem; }
   @media (min-width: 40rem) {
@@ -338,17 +345,28 @@ body {
 .card {
   background-color: #565656;
   border-radius: 0.25rem;
+  -webkit-box-shadow: 0 20px 15px -12px rgba(0, 0, 0, 0.25);
   box-shadow: 0 20px 15px -12px rgba(0, 0, 0, 0.25);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   overflow: hidden; }
   .card:hover .card__image {
+    -webkit-filter: contrast(100%);
     filter: contrast(100%); }
 
 .card__button {
   background-color: #ff851b;
   padding: 0.25rem 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
   justify-content: space-evenly; }
   .card__button .card__icon {
     font-size: 1.6rem;
@@ -357,11 +375,19 @@ body {
     -webkit-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out; }
     .card__button .card__icon:hover {
+      -webkit-transform: translateY(-5px);
       transform: translateY(-5px); }
 
 .card__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   padding: 1rem; }
   .card__content .card__title {
@@ -372,6 +398,8 @@ body {
     letter-spacing: 0.5px;
     text-transform: uppercase; }
   .card__content .card__text {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     font-size: 0.875rem;
     line-height: 1.5;
@@ -383,6 +411,7 @@ body {
   background-size: cover;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
+  -webkit-filter: contrast(70%);
   filter: contrast(70%);
   overflow: hidden;
   position: relative;
@@ -496,7 +525,6 @@ body {
     transform: translate3d(100%, 0, 0); }
     .menu__branding .menu__portrait {
       background: url(../img/adam_portrait_small.jpg) no-repeat center center;
-      background-attachment: fixed;
       background-size: cover;
       width: 150px;
       height: 150px; }
