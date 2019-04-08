@@ -315,6 +315,10 @@ body {
   flex-direction: column;
   padding: 1rem;
 
+  & a {
+    text-decoration: none;
+  }
+
   .card__title {
     color: $secondary-color;
     font-size: 1.25rem;
