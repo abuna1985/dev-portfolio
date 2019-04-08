@@ -52,7 +52,6 @@
       width: 250px;
       height: 250px;
       background: url(../img/adam_portrait.jpg) no-repeat center center;
-      background-attachment: fixed;
       background-size: cover;
       border-radius: 50%;
       border: solid 3px #ff851b;
@@ -390,6 +389,8 @@ body {
   -ms-flex-direction: column;
   flex-direction: column;
   padding: 1rem; }
+  .card__content a {
+    text-decoration: none; }
   .card__content .card__title {
     color: #ff851b;
     font-size: 1.25rem;
