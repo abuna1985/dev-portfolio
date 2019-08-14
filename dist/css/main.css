@@ -389,7 +389,7 @@ body {
   -ms-flex-direction: column;
   flex-direction: column;
   padding: 1rem; }
-  .card__content a {
+  .card__content .card__link {
     text-decoration: none; }
   .card__content .card__title {
     color: #ff851b;

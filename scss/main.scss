@@ -315,9 +315,9 @@ body {
   flex-direction: column;
   padding: 1rem;
 
-  & a {
+  & .card__link {
     text-decoration: none;
-  }
+  } 
 
   .card__title {
     color: $secondary-color;
