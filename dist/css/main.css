@@ -426,15 +426,15 @@ body {
     .card__image::before {
       padding-top: 66.6%; } }
   .card__image.card__image--project-1 {
-    background-image: url(../img/projects/project-1.jpg); }
+    background-image: url(../img/projects/project-1-min.jpg); }
   .card__image.card__image--project-2 {
-    background-image: url(../img/projects/project-2.jpg); }
+    background-image: url(../img/projects/project-2-min.jpg); }
   .card__image.card__image--project-3 {
-    background-image: url(../img/projects/project-3.jpg); }
+    background-image: url(../img/projects/project-3-min.jpg); }
   .card__image.card__image--project-4 {
-    background-image: url(../img/projects/project-4.jpg); }
+    background-image: url(../img/projects/project-4-min.jpg); }
   .card__image.card__image--project-5 {
-    background-image: url(../img/projects/project-5.jpg);
+    background-image: url(../img/projects/project-5-min.jpg);
     background-position: left center; }
 
 /* Contact Page */
