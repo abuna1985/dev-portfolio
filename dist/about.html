@@ -8,9 +8,8 @@
     <link rel="shortcut icon" href="favicon.ico">
     <link
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-      crossorigin="anonymous"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+      type="text/css"
     />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
   </head>
@@ -42,56 +41,58 @@
     </header>
 
     <main class="main main--about">
-      <h1 class="main__title">
-        About <span class="main--secondary-color">Me</span>
-      </h1>
-      <h2 class="main__subtitle">My programming journey...</h2>
-      <div class="about">
-        <div class="about__image">
-          <picture>
-            <source
-              srcset="./img/adam_portrait.jpg"
-              media="(min-width: 768px)"
-            />
-            <img
-              src="./img/adam_portrait_small.jpg"
-              alt="Adam Abundis Portrait"
-            />
-          </picture>
+      <article>
+        <h1 class="main__title">
+          About <span class="main--secondary-color">Me</span>
+        </h1>
+        <h2 class="main__subtitle">My programming journey...</h2>
+        <div class="about">
+          <div class="about__image">
+            <picture>
+              <source
+                srcset="./img/adam_portrait.jpg"
+                media="(min-width: 768px)"
+              />
+              <img
+                src="./img/adam_portrait_small.jpg"
+                alt="Adam Abundis Portrait"
+              />
+            </picture>
+          </div>
+          <div class="bio">
+            <p class="bio__text">
+              I’m a web developer who currently resides in Santa Ana, CA. I spend my days working in many different areas of web development from back end programming (PHP/Codeingniter, Node.js/Express.js, Golang) to front-end infrastructure (HTML, CSS, Bootstrap, and Javascript(ES6)/Vue.js), web accessibility, and user experience.
+            </p>
+            <p class="bio__text">
+              I have a true passion for web development and helping small businesses and fellow web developers build and improve their online presence. Aside from web development, I enjoy spending my time with my wife, daughter, brewing beer, camping, hiking and watching sports (baseball, pro/college football, and soccer).
+            </p>
+          </div>
+          <div class="job job--1">
+            <h3 class="job__title">Trilogy Education (UCR Extension)</h3>
+            <h4 class="job__subtitle">Web Dev Bootcamp Teaching Assistant</h4>
+            <p>
+              Mentoring and coaching students through the full-stack web development curriculum. Reviewing and providing feedback for assignments and projects to ensure code quality and design consistency across all of the student’s work.
+  
+            </p>
+          </div>
+          <div class="job job--2">
+            <h3 class="job__title">Turnkey Marketing</h3>
+            <h4 class="job__subtitle">Junior Full-Stack Developer</h4>
+            <p>
+              Developing and customizing existing features for our CSV parsing application using HTML, CSS, Bootstrap, JavaScript, and Codeingniter(PHP). Experimenting with Golang and Vue.js to build RESTful API endpoints and providing an updated admin interface.
+            </p>
+          </div>
+          <div class="job job--3">
+            <h3 class="job__title">Deluxe Brand Marketing</h3>
+            <h4 class="job__subtitle">Junior Web Developer</h4>
+            <p>
+              Improved the existing customer-facing portal utilizing HTML, CSS, Bootstrap, and ES6 JavaScript. Designed custom HTML email templates in a Node.js and AWS environment for weekly email marketing campaigns used by hundreds of clients.
+            </p>
+          </div>
         </div>
-        <div class="bio">
-          <p class="bio__text">
-            I’m a web developer who currently resides in Santa Ana, CA. I spend my days working in many different areas of web development from back end programming (PHP/Codeingniter/Laravel, Node.js/Express.js) to front-end infrastructure (HTML, CSS, and Javascript/jQuery/Vue.js), web accessibility, and user experience.
-          </p>
-          <p class="bio__text">
-            I have a true passion for web development and helping small businesses and fellow web developers build and improve their online presence. Aside from web development, I enjoy spending my time with my wife, daughter, brewing beer, camping, hiking and watching sports (baseball, pro/college football, and soccer).
-          </p>
-        </div>
-        <div class="job job--1">
-          <h3 class="job__title">Turnkey Marketing</h3>
-          <h4 class="job__subtitle">Junior Full-Stack Developer</h4>
-          <p>
-            One of my proudest accomplishments was researching, testing, and implementing a layout redesign of multiple applications using the Bulma CSS framework. I also successfully created internal RESTful API endpoints using Codeingniter and Laravel.
-          </p>
-        </div>
-        <div class="job job--2">
-          <h3 class="job__title">Deluxe Brand Marketing</h3>
-          <h4 class="job__subtitle">Junior Web Developer</h4>
-          <p>
-           One of my main accomplishments was implementing custom HTML email templates in a Node.js and AWS environment for weekly email
-           marketing campaigns utilized by hundreds of clients.
-          </p>
-        </div>
-        <div class="job job--3">
-          <h3 class="job__title">Cornerstone Payment Systems</h3>
-          <h4 class="job__subtitle">Front End Developer Intern</h4>
-          <p>
-            I developed custom e-commerce websites on top of a custom PHP templating platform. I also tested front-end code in multiple browsers to ensure cross-browser compatibility.
-          </p>
-        </div>
-      </div>
+      </article>
     </main>
-    <footer id="main-footer">Copyright &copy; 2019</footer>
+    <footer id="main-footer">Copyright &copy; 2020</footer>
 
     <script src="js/main.js"></script>
   </body>
