@@ -74,6 +74,15 @@ html {
   text-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); }
 
 /* 2. Shared Styles */
+.wallpaper,
+.picture__shadow,
+.picture__image {
+  display: block;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%; }
+
 /* 3. Specific Styles */
 @media screen and (min-width: 1171px) {
   /* width of 1171px and higher */ }
