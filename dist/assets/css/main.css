@@ -1,0 +1,88 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap);
+/*$primary-color-gradient: #005A9C;*/
+/* Animation */
+@keyframes bounceIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5); }
+  to {
+    opacity: 1;
+    transform: scale(1); } }
+
+@keyframes fillUp {
+  from {
+    transform: scaleX(0); }
+  to {
+    transform: scaleX(1); } }
+
+@keyframes picImage {
+  from {
+    opacity: 0;
+    transform: scale(1.2) translateY(-1rem); }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0); } }
+
+@keyframes picShadow {
+  from {
+    opacity: 0;
+    transform: scale(1.2) translateY(4rem); }
+  to {
+    opacity: 1;
+    transform: scale(1.1) translateY(0); } }
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-1rem); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(1rem); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes zoomOut {
+  from {
+    opacity: 0;
+    transform: scale(1.05); }
+  to {
+    opacity: 0.2;
+    transform: scale(1); } }
+
+/* Set Text Color */
+/* Media Query Mixins */
+/* Replace Header with more practical CSS */
+/* 1. Base Styles */
+html {
+  background-color: #1e90ff;
+  background-image: linear-gradient(to bottom right, #1e90ff, #004680);
+  color: #fff;
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  min-height: 100vh;
+  min-width: 300px;
+  overflow-x: hidden;
+  text-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); }
+
+/* 2. Shared Styles */
+/* 3. Specific Styles */
+@media screen and (min-width: 1171px) {
+  /* width of 1171px and higher */ }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  /* width between 769px and 1170px */ }
+
+@media screen and (max-width: 768px) {
+  /* width of max-width: 768px */ }
+
+@media screen and (max-width: 530px) {
+  /* width of 530px or less */ }
