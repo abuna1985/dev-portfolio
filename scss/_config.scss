@@ -1,5 +1,10 @@
-/*$primary-color: #444;
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap);
+
+$primary-color: #1e90ff;
+$primary-color-gradient: #004680;
+/*$primary-color-gradient: #005A9C;*/
 $secondary-color: #ff851b;
+$quicksand: "Quicksand", sans-serif;
 $show-home-image: true;
 $home-image: url(../img/background.jpg);
 $portrait-image: url(../img/adam_portrait.jpg);
@@ -9,7 +14,83 @@ $project-img-2: url(../img/projects/project-2-min.jpg);
 $project-img-3: url(../img/projects/project-3-min.jpg);
 $project-img-4: url(../img/projects/project-4-min.jpg);
 $project-img-5: url(../img/projects/project-5-min.jpg);
-$background-opacity: 0.9;*/
+$background-opacity: 0.9;
+
+/* Animation */
+@keyframes bounceIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fillUp {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes picImage {
+  from {
+    opacity: 0;
+    transform: scale(1.2) translateY(-1rem);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes picShadow {
+  from {
+    opacity: 0;
+    transform: scale(1.2) translateY(4rem);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.1) translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomOut {
+  from {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  to {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+}
 
 @mixin easeOut {
   -webkit-transition: all 0.5s ease-out;

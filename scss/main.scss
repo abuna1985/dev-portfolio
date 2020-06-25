@@ -2,7 +2,35 @@
 @import "header";
 
 /* 1. Base Styles */
+html {
+  background-color: $primary-color;
+  background-image: linear-gradient(
+    to bottom right,
+    $primary-color,
+    $primary-color-gradient
+  );
+  color: #fff;
+  font-family: $quicksand;
+  font-size: 16px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  min-height: 100vh;
+  min-width: 300px;
+  overflow-x: hidden;
+  text-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
 /* 2. Shared Styles */
+.wallpaper,
+.picture__shadow,
+.picture__image {
+  display: block;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
 /* 3. Specific Styles */
 
 @import "mobile";

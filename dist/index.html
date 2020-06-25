@@ -4,84 +4,211 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Adam Abundis - Portfolio</title>
+    <title>Adam Abundis - Home</title>
     <link rel="shortcut icon" href="favicon.ico" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
       type="text/css"
     />
-    <link rel="stylesheet" href="css/minireset.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" href="assets/css/minireset.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
   </head>
-  <body class="bg-img">
+  <body>
+    <div
+      id="wallpaper"
+      class="wallpaper"
+      data-image="assets/images/code.jpg"
+    ></div>
     <header class="header">
-      <div class="menu-btn">
-        <div class="menu-btn__line"></div>
-        <div class="menu-btn__line"></div>
-        <div class="menu-btn__line"></div>
-      </div>
+      <button id="button" class="menu-btn">
+        <span class="menu-btn__line"></span>
+        <span class="menu-btn__line"></span>
+        <span class="menu-btn__line"></span>
+      </button>
 
       <nav class="menu">
-        <div class="menu__branding"><div class="menu__portrait"></div></div>
+        <a href="index.html" class="menu__logo">Adam Abundis</a>
         <ul class="menu-nav">
           <li class="menu-nav__item menu-nav--current">
-            <a href="./index.html" class="menu-nav__link">Home</a>
+            <a href="index.html" class="menu-nav__link">Home</a>
           </li>
           <li class="menu-nav__item">
-            <a href="./about.html" class="menu-nav__link">About Me</a>
+            <a href="about.html" class="menu-nav__link">About Me</a>
           </li>
           <li class="menu-nav__item">
-            <a href="./work.html" class="menu-nav__link">My Work</a>
+            <a href="work.html" class="menu-nav__link">Portfolio</a>
           </li>
           <li class="menu-nav__item">
-            <a href="./contact.html" class="menu-nav__link">Contact Me</a>
+            <a href="contact.html" class="menu-nav__link">Contact Me</a>
           </li>
         </ul>
       </nav>
     </header>
+    <div class="content">
+      <aside class="side">
+        <figure id="picture" class="picture">
+          <div class="picture__shadow"></div>
+          <img
+            id="pictureImage"
+            class="picture__image"
+            src="assets/images/adam.jpg"
+            srcset="
+              assets/images/adam.jpg    1x,
+              assets/images/adam@2x.jpg 2x,
+              assets/images/adam@3x.jpg 3x
+            "
+            title="Portrait of Adam Abundis"
+            alt="Portrait of Adam Abundis"
+            width="320"
+            height="320"
+          />
+        </figure>
+      </aside>
+      <main class="main main--home">
+        <article>
+          <h1 class="main__title">
+            Ahoy hoy! I'm Adam Abundis
+          </h1>
+          <p class="main__job">
+            Web Developer
+          </p>
+          <hr class="hr" />
+          <div class="description">
+            <p class="description__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis, similique, perferendis dolore necessitatibus fugit
+              laboriosam aperiam incidunt tenetur molestias odio tempore dolores
+              corrupti adipisci soluta consequuntur modi, nostrum provident!
+              Cumque.
+            </p>
+          </div>
+          <div class="contact-container">
+            <div class="contact">
+              <a
+                href="mailto:adamjabundis@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Get in touch</a
+              >
+            </div>
+            <ul class="social">
+              <li>
+                <a
+                  href="https://twitter.com/ArtooAye2"
+                  target="_blank"
+                  title="Twitter"
+                  class="icons__link"
+                >
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/abuna1985"
+                  target="_blank"
+                  title="GitHub"
+                  class="icons__link"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/adam-abundis/"
+                  target="_blank"
+                  title="LinkedIn"
+                  class="icons__link"
+                >
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="icons__link"
+                  target="_blank"
+                  title="Codepen"
+                  href="https://codepen.io/adamabundis/"
+                >
+                  <i class="fab fa-codepen"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </article>
+      </main>
+    </div>
 
-    <main class="main main--home">
-      <article>
-        <h1 class="main__title">
-          Adam <span class="main--secondary-color">Abundis</span>
-        </h1>
-        <h2 class="main__subtitle">
-          Web Developer, Programmer & Student Of All Things Web!
-        </h2>
-        <div class="icons">
-          <a
-            class="icons__link"
-            target="_blank"
-            href="https://twitter.com/ArtooAye2"
-          >
-            <i class="fab fa-twitter fa-2x"></i>
-          </a>
-          <a
-            class="icons__link"
-            target="_blank"
-            href="https://www.linkedin.com/in/adam-abundis/"
-          >
-            <i class="fab fa-linkedin fa-2x"></i>
-          </a>
-          <a
-            class="icons__link"
-            target="_blank"
-            href="https://github.com/abuna1985"
-          >
-            <i class="fab fa-github fa-2x"></i>
-          </a>
-          <a
-            class="icons__link"
-            target="_blank"
-            href="https://codepen.io/adamabundis/#"
-          >
-            <i class="fab fa-codepen fa-2x"></i>
-          </a>
-        </div>
-      </article>
-    </main>
-
-    <script src="js/main.js"></script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
+
+<!--  <div
+      id="wallpaper"
+      class="wallpaper"
+      data-image="assets/images/austria.jpg"
+    ></div>
+    <div class="content">
+      <aside class="side">
+        <figure id="picture" class="picture">
+          <div class="picture-shadow"></div>
+          <img
+            id="pictureImage"
+            class="picture-image"
+            src="assets/images/alex.jpg"
+            srcset="
+              assets/images/alex.jpg    1x,
+              assets/images/alex@2x.jpg 2x,
+              assets/images/alex@3x.jpg 3x
+            "
+            title="Portrait of Alex Jefferson"
+            alt="Portrait of Alex Jefferson"
+            width="320"
+            height="320"
+          />
+        </figure>
+      </aside>
+      <main class="about">
+        <h1 class="name">Hi, I'm Alex Jefferson</h1>
+        <p class="job">Tech recruiter</p>
+        <hr class="hr" />
+        <div class="description">
+          <p>
+            I spend my time traveling the world, helping startups and tech
+            businesses hire the best people.
+          </p>
+        </div>
+        <div class="contact">
+          <a href="#" class="button">Get in touch</a>
+        </div>
+        <ul class="social">
+          <li>
+            <a href="#" title="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" title="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+        </ul>
+      </main>
+    </div>
+    <noscript>
+      <style type="text/css">
+        .wallpaper {
+          animation-name: zoomOut;
+        }
+
+        .picture {
+          animation-name: dropIn;
+        }
+      </style>
+    </noscript>
+  </body> -->
