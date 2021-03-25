@@ -2,7 +2,7 @@
 
 A simple portfolio written in [HTML](https://www.w3.org/TR/html52/), [Sass](https://sass-lang.com/guide), and [JavaScript](https://developer.mozilla.org/bm/docs/Web/JavaScript)
 
-![alt text](./dist/img/projects/project-5.jpg "Adam Abundis Dev Portfolio")
+![alt text](./dist/img/projects/adam-abundis-portfolio.jpg "Adam Abundis Dev Portfolio")
 
 Demo
 -------
@@ -11,6 +11,9 @@ Live version: [https://adamabundis.xyz](https://adamabundis.xyz)
 Main Technology Stack
 -------
 * HTML
+* CSS Flexbox and Grid 
+* CSS Animations
+* CSS BEM naming convention
 * Sass
 * JavaScript
 * NPM
