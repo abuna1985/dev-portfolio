@@ -34,6 +34,7 @@ body {
   }
 
   &__subtitle {
+    color: $accent-color;
     font-size: 2vw;
     margin-bottom: 2rem;
     padding: 0.2rem 0;
@@ -136,6 +137,7 @@ body {
         text-decoration: none;
         margin-right: 10px;
         color: #fff;
+        font-size: 1.5rem;
         height: 55.5px;
         width: 55.5px;
         display: -webkit-box;
@@ -240,6 +242,7 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  justify-content: center;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -249,7 +252,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 1rem;
+  flex: 0 1 350px;
+  margin: 20px;
   @media (min-width: 40rem) {
     width: 50%;
   }
@@ -374,11 +378,16 @@ body {
   }
 
   &.card__image--project-4 {
-    background-image: $project-img-4;
+    background-image: $project-img-4; 
   }
 
   &.card__image--project-5 {
     background-image: $project-img-5;
+    background-position: top center;
+  }
+
+  &.card__image--project-6 {
+    background-image: $project-img-6;
     background-position: left center;
   }
 }

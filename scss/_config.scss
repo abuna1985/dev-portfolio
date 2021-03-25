@@ -1,14 +1,16 @@
-$primary-color: #444;
-$secondary-color: #ff851b;
+$primary-color: #001f3f;
+$secondary-color: #1e90ff;
+$accent-color: #DDDDDD;
 $show-home-image: true;
 $home-image: url(../img/background.jpg);
 $portrait-image: url(../img/adam_portrait.jpg);
 $portrait-image-small: url(../img/adam_portrait_small.jpg);
-$project-img-1: url(../img/projects/project-1-min.jpg);
-$project-img-2: url(../img/projects/project-2-min.jpg);
-$project-img-3: url(../img/projects/project-3-min.jpg);
-$project-img-4: url(../img/projects/project-4-min.jpg);
-$project-img-5: url(../img/projects/project-5-min.jpg);
+$project-img-1: url(../img/projects/react-counter.jpg);
+$project-img-2: url(../img/projects/clear-view-escapes.jpg);
+$project-img-3: url(../img/projects/wrong-turn-winery.jpg);
+$project-img-4: url(../img/projects/omnifood-delivery.jpg);
+$project-img-5: url(../img/projects/vue-appointment-setter.jpg);
+$project-img-6: url(../img/projects/adam-abundis-portfolio.jpg);
 $background-opacity: 0.9;
 
 @mixin easeOut {
