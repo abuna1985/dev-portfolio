@@ -2,7 +2,7 @@
 
 A simple portfolio written in [HTML](https://www.w3.org/TR/html52/), [Sass](https://sass-lang.com/guide), and [JavaScript](https://developer.mozilla.org/bm/docs/Web/JavaScript)
 
-![alt text](./dist/img/projects/adam-abundis-portfolio.jpg "Adam Abundis Dev Portfolio")
+<img src="./dist/img/projects/adam-abundis-portfolio.jpg" alt="Adam Abundis Dev Portfolio" />
 
 Demo
 -------
