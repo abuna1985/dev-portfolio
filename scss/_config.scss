@@ -18,6 +18,15 @@ $background-opacity: 0.9;
   transition: all 0.5s ease-out;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+} 
+
 @mixin background {
   @if $show-home-image { 
     &.bg-img {

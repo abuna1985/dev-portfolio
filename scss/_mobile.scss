@@ -1,12 +1,93 @@
 // Widescreens
 
 @include atExtraLarge {
+  .header {
+    background: rgba(0, 36, 73, 0.8);
+  }
+  .header .menu-btn,
+  .header .menu {
+    display: none;
+  }
+
+  .menu--desktop {
+    display: block;
+    padding-right: 20px;
+  }
+
+  .desktop-menu {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding: .25rem;
+    
+    &__item {
+      padding-right: 25px;
+      &.desktop-menu--current > .desktop-menu__link {
+        color: $secondary-color;
+      }
+    }
+
+    &__link {
+      color: set-text-color($primary-color);
+      font-size: 1.5rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      text-decoration: none;
+
+      &:hover {
+        color: $secondary-color;
+        @include easeOut;
+      }
+    }
+  }
+
   .projects {
     grid-template-columns: repeat(4, fr);
   }
 }
 
 @include atLarge {
+  .header {
+    background: rgba(0, 36, 73, 0.8);
+  }
+
+  .header .menu-btn,
+  .header .menu {
+    display: none;
+  }
+
+  .menu--desktop {
+    display: block;
+    padding-right: 20px;
+  }
+
+ .desktop-menu {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding: .25rem;
+    
+    &__item {
+      padding-right: 25px;
+      &.desktop-menu--current > .desktop-menu__link {
+        color: $secondary-color;
+      }
+    }
+
+    &__link {
+      color: set-text-color($primary-color);
+      font-size: 1.5rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      text-decoration: none;
+
+      &:hover {
+        color: $secondary-color;
+        @include easeOut;
+      }
+    }
+  }
+
   .projects {
     grid-template-columns: repeat(3, fr);
   }

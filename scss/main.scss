@@ -187,7 +187,6 @@ body {
       border-radius: 50%;
       @include easeOut;
       border: 3px solid $secondary-color;
-      cursor: pointer;
 
       &:hover {
         -webkit-transform: rotate(-30deg);

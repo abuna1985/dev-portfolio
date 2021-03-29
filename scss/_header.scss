@@ -54,6 +54,10 @@
   width: 100%;
   visibility: hidden;
 
+  &--desktop {
+    display: none;
+  }
+
   &__branding {
     background: rgba($primary-color, 0.9);
     @include easeOut;
@@ -74,7 +78,6 @@
       border-radius: 50%;
       border: solid 3px $secondary-color;
       @include easeOut;
-      cursor: pointer;
 
       &:hover {
         -webkit-transform: rotate(30deg);
@@ -118,14 +121,12 @@
     @include easeOut;
 
     &__item {
-      -webkit-transform: translate3d(800px, 0, 0);
-      transform: translate3d(800px, 0, 0);
       @include easeOut;
 
       &.menu--show {
         /* Slide in from top */
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
+        animation: fadeIn ease-in-out 2s;
+        -webkit-animation: fadeIn ease-in-out 2s;
       }
 
       .menu-nav__link {

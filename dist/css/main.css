@@ -1,3 +1,9 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 /* Set Text Color */
 /* Media Query Mixins */
 .header {
@@ -38,6 +44,8 @@
   top: 0;
   width: 100%;
   visibility: hidden; }
+  .menu--desktop {
+    display: none; }
   .menu__branding {
     background: rgba(0, 31, 63, 0.9);
     -webkit-transition: all 0.5s ease-out;
@@ -56,8 +64,7 @@
       border-radius: 50%;
       border: solid 3px #1e90ff;
       -webkit-transition: all 0.5s ease-out;
-      transition: all 0.5s ease-out;
-      cursor: pointer; }
+      transition: all 0.5s ease-out; }
       .menu__branding .menu__portrait:hover {
         -webkit-transform: rotate(30deg);
         transform: rotate(30deg); }
@@ -91,14 +98,12 @@
     -webkit-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out; }
     .menu-nav__item {
-      -webkit-transform: translate3d(800px, 0, 0);
-      transform: translate3d(800px, 0, 0);
       -webkit-transition: all 0.5s ease-out;
       transition: all 0.5s ease-out; }
       .menu-nav__item.menu--show {
         /* Slide in from top */
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0); }
+        animation: fadeIn ease-in-out 2s;
+        -webkit-animation: fadeIn ease-in-out 2s; }
       .menu-nav__item .menu-nav__link {
         display: inline-block;
         position: relative;
@@ -203,7 +208,8 @@ body {
   .main .contact {
     display: grid;
     grid-gap: 10px;
-    grid-template-areas: "email" "links";
+    grid-template-areas: "email"
+ "links";
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
     color: #fff; }
@@ -273,7 +279,8 @@ body {
 .about {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: "bioimage bio   bio" "job1     job2  job3";
+  grid-template-areas: "bioimage bio   bio"
+ "job1     job2  job3";
   grid-template-columns: repeat(3, 1fr); }
   .about__image {
     grid-area: bioimage;
@@ -292,8 +299,7 @@ body {
       border-radius: 50%;
       -webkit-transition: all 0.5s ease-out;
       transition: all 0.5s ease-out;
-      border: 3px solid #1e90ff;
-      cursor: pointer; }
+      border: 3px solid #1e90ff; }
       .about__image img:hover {
         -webkit-transform: rotate(-30deg);
         transform: rotate(-30deg); }
@@ -430,16 +436,20 @@ body {
     .card__image::before {
       padding-top: 66.6%; } }
   .card__image.card__image--project-1 {
-    background-image: url(../img/projects/react-counter.jpg); }
+    background-image: url(../img/projects/react-counter.jpg); 
+  }
   .card__image.card__image--project-2 {
-    background-image: url(../img/projects/clear-view-escapes.jpg); }
+    background-image: url(../img/projects/clear-view-escapes.jpg); 
+  }
   .card__image.card__image--project-3 {
-    background-image: url(../img/projects/wrong-turn-winery.jpg); }
+    background-image: url(../img/projects/wrong-turn-winery.jpg); 
+  }
   .card__image.card__image--project-4 {
-    background-image: url(../img/projects/omnifood-delivery.jpg); }
+    background-image: url(../img/projects/omnifood-delivery.jpg); 
+  }
   .card__image.card__image--project-5 {
     background-image: url(../img/projects/vue-appointment-setter.jpg);
-    background-position: top center; }
+   }
   .card__image.card__image--project-6 {
     background-image: url(../img/projects/adam-abundis-portfolio.jpg);
     background-position: left center; }
@@ -480,10 +490,64 @@ body {
   height: 60px; }
 
 @media screen and (min-width: 1171px) {
+  .header {
+    background: rgba(0, 36, 73, 0.8); }
+  .header .menu-btn,
+  .header .menu {
+    display: none; }
+  .menu--desktop {
+    display: block;
+    padding-right: 20px; }
+  .desktop-menu {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding: .25rem; }
+    .desktop-menu__item {
+      padding-right: 25px; }
+      .desktop-menu__item.desktop-menu--current > .desktop-menu__link {
+        color: #1e90ff; }
+    .desktop-menu__link {
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      text-decoration: none; }
+      .desktop-menu__link:hover {
+        color: #1e90ff;
+        -webkit-transition: all 0.5s ease-out;
+        transition: all 0.5s ease-out; }
   .projects {
     grid-template-columns: repeat(4, fr); } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
+  .header {
+    background: rgba(0, 36, 73, 0.8); }
+  .header .menu-btn,
+  .header .menu {
+    display: none; }
+  .menu--desktop {
+    display: block;
+    padding-right: 20px; }
+  .desktop-menu {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding: .25rem; }
+    .desktop-menu__item {
+      padding-right: 25px; }
+      .desktop-menu__item.desktop-menu--current > .desktop-menu__link {
+        color: #1e90ff; }
+    .desktop-menu__link {
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      text-decoration: none; }
+      .desktop-menu__link:hover {
+        color: #1e90ff;
+        -webkit-transition: all 0.5s ease-out;
+        transition: all 0.5s ease-out; }
   .projects {
     grid-template-columns: repeat(3, fr); } }
 
@@ -537,7 +601,12 @@ body {
       width: 150px;
       height: 150px; }
   .about {
-    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3" "footer";
+    grid-template-areas: "bioimage"
+ "bio"
+ "job1"
+ "job2"
+ "job3"
+ "footer";
     grid-template-columns: 1fr; }
     .about__image {
       padding-top: 25px; }
