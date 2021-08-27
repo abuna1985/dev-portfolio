@@ -208,8 +208,7 @@ body {
   .main .contact {
     display: grid;
     grid-gap: 10px;
-    grid-template-areas: "email"
- "links";
+    grid-template-areas: "email" "links";
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
     color: #fff; }
@@ -279,8 +278,7 @@ body {
 .about {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: "bioimage bio   bio"
- "job1     job2  job3";
+  grid-template-areas: "bioimage bio   bio" "job1     job2  job3";
   grid-template-columns: repeat(3, 1fr); }
   .about__image {
     grid-area: bioimage;
@@ -436,23 +434,18 @@ body {
     .card__image::before {
       padding-top: 66.6%; } }
   .card__image.card__image--project-1 {
-    background-image: url(../img/projects/react-counter.jpg); 
-  }
+    background-image: url(../img/projects/react-counter.jpg); }
   .card__image.card__image--project-2 {
-    background-image: url(../img/projects/clear-view-escapes.jpg); 
-  }
+    background-image: url(../img/projects/clear-view-escapes.jpg); }
   .card__image.card__image--project-3 {
-    background-image: url(../img/projects/wrong-turn-winery.jpg); 
-  }
+    background-image: url(../img/projects/wrong-turn-winery.jpg); }
   .card__image.card__image--project-4 {
-    background-image: url(../img/projects/omnifood-delivery.jpg); 
-  }
+    background-image: url(../img/projects/omnifood-delivery.jpg); }
   .card__image.card__image--project-5 {
     background-image: url(../img/projects/vue-appointment-setter.jpg);
-   }
+    background-position: top center; }
   .card__image.card__image--project-6 {
-    background-image: url(../img/projects/adam-abundis-portfolio.jpg);
-    background-position: left center; }
+    background-image: url(../img/projects/hack-for-la.jpg); }
 
 /* Contact Page */
 .boxes {
@@ -601,12 +594,7 @@ body {
       width: 150px;
       height: 150px; }
   .about {
-    grid-template-areas: "bioimage"
- "bio"
- "job1"
- "job2"
- "job3"
- "footer";
+    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3" "footer";
     grid-template-columns: 1fr; }
     .about__image {
       padding-top: 25px; }
