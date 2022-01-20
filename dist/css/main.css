@@ -333,8 +333,10 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   list-style: none;
-  margin: 0;
-  padding: 0; }
+  margin: 0; }
+  @media (max-width: 56rem) {
+    .cards {
+      padding: 0; } }
 
 .cards__item {
   display: -webkit-box;
