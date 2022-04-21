@@ -71,7 +71,7 @@ body {
   &--contact,
   &--work {
     .main__title {
-      margin-top: 10vh;
+      margin-top: 5vh;
     }
   }
 
@@ -199,15 +199,20 @@ body {
     background: lighten($primary-color, 5);
     padding: 0.5rem;
     border-bottom: 5px solid $secondary-color;
-    margin-top: 5vh;
+    margin-top: 1rem;
 
     &__title {
       color: $secondary-color;
-      font-weight: 400;
+      font-weight: 600;
     }
 
     &__subtitle {
-      font-weight: 400;
+      font-weight: 500;
+    }
+
+    &__title,
+    &__subtitle {
+      margin: 1rem 0;
     }
 
     &.job--1 {

@@ -65,7 +65,8 @@
     display: flex;
     justify-content: flex-end;
     list-style: none;
-    padding: .25rem;
+    margin: 1rem;
+    width: 100%;
     
     &__item {
       padding-right: 25px;
