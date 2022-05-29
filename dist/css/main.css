@@ -208,8 +208,7 @@ body {
   .main .contact {
     display: grid;
     grid-gap: 10px;
-    grid-template-areas: "email"
- "links";
+    grid-template-areas: "email" "links";
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
     color: #fff; }
@@ -279,8 +278,7 @@ body {
 .about {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: "bioimage bio   bio"
- "job1     job2  job3";
+  grid-template-areas: "bioimage bio   bio" "job1     job2  job3";
   grid-template-columns: repeat(3, 1fr); }
   .about__image {
     grid-area: bioimage;
@@ -313,6 +311,8 @@ body {
       font-weight: 600; }
     .about .job__subtitle {
       font-weight: 500; }
+    .about .job__title, .about .job__subtitle {
+      margin: 1rem 0; }
     .about .job.job--1 {
       grid-area: job1; }
     .about .job.job--2 {
@@ -438,13 +438,13 @@ body {
     .card__image::before {
       padding-top: 66.6%; } }
   .card__image.card__image--project-1 {
-    background-image: url(../img/projects/react-counter.jpg); }
+    background-image: url(../img/projects/sortable-table.jpg); }
   .card__image.card__image--project-2 {
-    background-image: url(../img/projects/clear-view-escapes.jpg); }
+    background-image: url(../img/projects/react-counter.jpg); }
   .card__image.card__image--project-3 {
-    background-image: url(../img/projects/wrong-turn-winery.jpg); }
+    background-image: url(../img/projects/clear-view-escapes.jpg); }
   .card__image.card__image--project-4 {
-    background-image: url(../img/projects/omnifood-delivery.jpg); }
+    background-image: url(../img/projects/wrong-turn-winery.jpg); }
   .card__image.card__image--project-5 {
     background-image: url(../img/projects/vue-appointment-setter.jpg);
     background-position: top center; }
@@ -499,8 +499,7 @@ body {
     display: flex;
     justify-content: flex-end;
     list-style: none;
-    margin: 1rem;
-    width: 100%; }
+    padding: .25rem; }
     .desktop-menu__item {
       padding-right: 25px; }
       .desktop-menu__item.desktop-menu--current > .desktop-menu__link {
@@ -531,7 +530,8 @@ body {
     display: flex;
     justify-content: flex-end;
     list-style: none;
-    padding: .25rem; }
+    margin: 1rem;
+    width: 100%; }
     .desktop-menu__item {
       padding-right: 25px; }
       .desktop-menu__item.desktop-menu--current > .desktop-menu__link {
@@ -599,12 +599,7 @@ body {
       width: 150px;
       height: 150px; }
   .about {
-    grid-template-areas: "bioimage"
- "bio"
- "job1"
- "job2"
- "job3"
- "footer";
+    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3" "footer";
     grid-template-columns: 1fr; }
     .about__image {
       padding-top: 25px; }
