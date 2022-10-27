@@ -305,14 +305,22 @@ body {
     background: #002c59;
     padding: 0.5rem;
     border-bottom: 5px solid #1e90ff;
-    margin-top: 1rem; }
-    .about .job__title {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly; }
+    .about .job .job__title {
       color: #1e90ff;
       font-weight: 600; }
-    .about .job__subtitle {
+    .about .job .job__subtitle {
       font-weight: 500; }
-    .about .job__title, .about .job__subtitle {
-      margin: 1rem 0; }
+    .about .job .job__title,
+    .about .job .job__subtitle,
+    .about .job .job__description {
+      margin: 0.5rem 0; }
+    .about .job.job--1 .job__description--1 {
+      margin: 1.25rem 0; }
+    .about .job__skills {
+      justify-self: flex-end; }
     .about .job.job--1 {
       grid-area: job1; }
     .about .job.job--2 {

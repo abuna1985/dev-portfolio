@@ -196,23 +196,36 @@ body {
   }
 
   .job {
+    $j: &; 
     background: lighten($primary-color, 5);
     padding: 0.5rem;
     border-bottom: 5px solid $secondary-color;
-    margin-top: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
 
-    &__title {
+    & .job__title {
       color: $secondary-color;
       font-weight: 600;
     }
 
-    &__subtitle {
+    & .job__subtitle {
       font-weight: 500;
     }
 
-    &__title,
-    &__subtitle {
-      margin: 1rem 0;
+    & .job__title,
+    & .job__subtitle,
+    & .job__description   {
+      margin: 0.5rem 0;
+    }
+
+    &.job--1 .job__description--1 {
+      margin: 1.25rem 0;
+    }
+
+
+    &__skills {
+      justify-self: flex-end;
     }
 
     &.job--1 {
