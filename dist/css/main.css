@@ -446,9 +446,9 @@ body {
     .card__image::before {
       padding-top: 66.6%; } }
   .card__image.card__image--project-1 {
-    background-image: url(../img/projects/sortable-table.jpg); }
+    background-image: url(../img/projects/vue-memory-game.jpg); }
   .card__image.card__image--project-2 {
-    background-image: url(../img/projects/react-counter.jpg); }
+    background-image: url(../img/projects/sortable-table.jpg); }
   .card__image.card__image--project-3 {
     background-image: url(../img/projects/clear-view-escapes.jpg); }
   .card__image.card__image--project-4 {
