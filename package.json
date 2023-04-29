@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/abuna1985/dev-portfolio#readme",
   "devDependencies": {
-    "browser-sync": "^2.26.3",
+    "browser-sync": "^2.29.1",
     "node-sass": "^7.0.0",
     "run-script-os": "^1.0.3"
   }
