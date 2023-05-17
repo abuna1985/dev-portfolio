@@ -208,7 +208,7 @@ body {
   .main .contact {
     display: grid;
     grid-gap: 10px;
-    grid-template-areas: "email" "links";
+    grid-template-areas: "email" "links";
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
     color: #fff; }
@@ -278,7 +278,7 @@ body {
 .about {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: "bioimage bio   bio" "job1     job2  job3";
+  grid-template-areas: "bioimage bio   bio" "job1     job2  job3";
   grid-template-columns: repeat(3, 1fr); }
   .about__image {
     grid-area: bioimage;
@@ -607,7 +607,7 @@ body {
       width: 150px;
       height: 150px; }
   .about {
-    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3" "footer";
+    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3" "footer";
     grid-template-columns: 1fr; }
     .about__image {
       padding-top: 25px; }
